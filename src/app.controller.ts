@@ -14,7 +14,7 @@ import { AppService } from './app.service';
 
 @Controller('report/:type')
 export class AppController {
-  constructor(private readonly appService) {}
+  constructor(private readonly appService: AppService) {}
   @Get('')
   getAllReports(@Param('type') type: string) {
     const reportType =
